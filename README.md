@@ -9,7 +9,7 @@ This example assumes Consul and Consul Template are installed.
 * Register Entity
 
 <pre><code>
- curl -X PUT http://localhost:8500/v1/catalog/register -d'{"Node" : "server1", "Address" : "172.16.4.11", "Service":{"ID" : "172.16.4.11:80", "Service": "v1", "Port":80}, "NodeMeta":{"location" : "v1", "upstream" : "v1_dev_example_com"}}'
+curl -X PUT http://localhost:8500/v1/catalog/register -d'{"Node" : "server1", "Address" : "172.16.4.11", "Service":{"ID" : "172.16.4.11:80", "Service": "v1", "Port":80}, "NodeMeta":{"location" : "v1", "upstream" : "v1_dev_example_com"}}'
 curl -X PUT http://localhost:8500/v1/catalog/register -d'{"Node" : "server2", "Address" : "172.16.4.12", "Service":{"ID" : "172.16.4.12:80", "Service": "v1", "Port":80}, "NodeMeta":{"location" : "v1", "upstream" : "v1_dev_example_com"}}'
 
 curl -X PUT http://localhost:8500/v1/catalog/register -d'{"Node" : "server3", "Address" : "172.16.4.21", "Service":{"ID" : "172.16.4.21:80", "Service": "v2", "Port":80}, "NodeMeta":{"location" : "v2", "upstream" : "v2_dev_example_com"}}'
